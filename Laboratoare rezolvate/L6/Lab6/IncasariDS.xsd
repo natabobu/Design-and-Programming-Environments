@@ -1,0 +1,253 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="IncasariDS" targetNamespace="http://tempuri.org/IncasariDS.xsd" xmlns:mstns="http://tempuri.org/IncasariDS.xsd" xmlns="http://tempuri.org/IncasariDS.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="1" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="RFConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="RFConnectionString (Settings)" PropertyReference="ApplicationSettings.Lab6.Properties.Settings.GlobalReference.Default.RFConnectionString" Provider="System.Data.OleDb" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="BD1ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="BD1ConnectionString (Settings)" PropertyReference="ApplicationSettings.Lab6.Properties.Settings.GlobalReference.Default.BD1ConnectionString" Provider="System.Data.OleDb" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="IncasariTableAdapter" GeneratorDataComponentClassName="IncasariTableAdapter" Name="Incasari" UserDataComponentName="IncasariTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="RFConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        Incasari.IdInc, Incasari.DataInc, RF.DRF, Incasari.Cantitate, RF.Moneda, Furnizori.DFurnizor
+FROM            ((Incasari LEFT OUTER JOIN
+                         Furnizori ON Incasari.IdFurnizor = Furnizori.IdFurnizor) LEFT OUTER JOIN
+                         RF ON Incasari.IdRF = RF.IdRF)</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="IdInc" DataSetColumn="IdInc" />
+              <Mapping SourceColumn="DataInc" DataSetColumn="DataInc" />
+              <Mapping SourceColumn="DRF" DataSetColumn="DRF" />
+              <Mapping SourceColumn="Cantitate" DataSetColumn="Cantitate" />
+              <Mapping SourceColumn="Moneda" DataSetColumn="Moneda" />
+              <Mapping SourceColumn="DFurnizor" DataSetColumn="DFurnizor" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ResursaFinanciaraTableAdapter" GeneratorDataComponentClassName="ResursaFinanciaraTableAdapter" Name="ResursaFinanciara" UserDataComponentName="ResursaFinanciaraTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="RFConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        RF.DRF, RF.Moneda, Stoc.Cantitate
+FROM            (RF LEFT OUTER JOIN
+                         Stoc ON Stoc.IdRF = RF.IdRF)</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="DRF" DataSetColumn="DRF" />
+              <Mapping SourceColumn="Moneda" DataSetColumn="Moneda" />
+              <Mapping SourceColumn="Cantitate" DataSetColumn="Cantitate" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="MaterialeTableAdapter" GeneratorDataComponentClassName="MaterialeTableAdapter" Name="Materiale" UserDataComponentName="MaterialeTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="BD1ConnectionString (Settings)" DbObjectName="Materiale" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        SUM(BonuriConsumContinut.Pret * BonuriConsumContinut.Cantitate) AS Expr1, Materiale.DMaterial
+FROM            (BonuriConsumContinut INNER JOIN
+                         Materiale ON BonuriConsumContinut.IdMaterial = Materiale.IdMaterial)
+GROUP BY Materiale.DMaterial</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Expr1" DataSetColumn="Valoare totala" />
+              <Mapping SourceColumn="DMaterial" DataSetColumn="DMaterial" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="CantitateMaterialeTableAdapter" GeneratorDataComponentClassName="CantitateMaterialeTableAdapter" Name="CantitateMateriale" UserDataComponentName="CantitateMaterialeTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="BD1ConnectionString (Settings)" DbObjectName="Materiale" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        SUM(BonuriConsumContinut.Cantitate) AS Expr1, Materiale.DMaterial
+FROM            (BonuriConsumContinut INNER JOIN
+                         Materiale ON BonuriConsumContinut.IdMaterial = Materiale.IdMaterial)
+GROUP BY Materiale.DMaterial</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Expr1" DataSetColumn="Cantitate" />
+              <Mapping SourceColumn="DMaterial" DataSetColumn="DMaterial" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="NoteElevTableAdapter" GeneratorDataComponentClassName="NoteElevTableAdapter" Name="NoteElev" UserDataComponentName="NoteElevTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="RFConnectionString (Settings)" DbObjectName="NoteElev" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        Materie, AVG(Nota) AS Medie
+FROM            NoteElev
+GROUP BY Materie</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Materie" DataSetColumn="Materie" />
+              <Mapping SourceColumn="Medie" DataSetColumn="Medie" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="LucrariTableAdapter" GeneratorDataComponentClassName="LucrariTableAdapter" Name="Lucrari" UserDataComponentName="LucrariTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="BD1ConnectionString (Settings)" DbObjectName="Lucrari" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        Lucrari.DLucrare, SUM(bcc.Cantitate * bcc.Pret) AS CostConsum
+FROM            ((BonuriConsumContinut bcc LEFT OUTER JOIN
+                         BonuriConsum bc ON bcc.IdBonConsum = bc.IdBonConsum) LEFT OUTER JOIN
+                         Lucrari ON Lucrari.IdLucrare = bc.IdLucrare)
+GROUP BY Lucrari.DLucrare</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="DLucrare" DataSetColumn="DLucrare" />
+              <Mapping SourceColumn="CostConsum" DataSetColumn="CostConsum" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="IncasariDS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="IncasariDS" msprop:Generator_UserDSName="IncasariDS">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Incasari" msprop:Generator_TableClassName="IncasariDataTable" msprop:Generator_TableVarName="tableIncasari" msprop:Generator_RowChangedName="IncasariRowChanged" msprop:Generator_TablePropName="Incasari" msprop:Generator_RowDeletingName="IncasariRowDeleting" msprop:Generator_RowChangingName="IncasariRowChanging" msprop:Generator_RowEvHandlerName="IncasariRowChangeEventHandler" msprop:Generator_RowDeletedName="IncasariRowDeleted" msprop:Generator_RowClassName="IncasariRow" msprop:Generator_UserTableName="Incasari" msprop:Generator_RowEvArgName="IncasariRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IdInc" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnIdInc" msprop:Generator_ColumnPropNameInRow="IdInc" msprop:Generator_ColumnPropNameInTable="IdIncColumn" msprop:Generator_UserColumnName="IdInc" type="xs:int" minOccurs="0" />
+              <xs:element name="DataInc" msprop:Generator_ColumnVarNameInTable="columnDataInc" msprop:Generator_ColumnPropNameInRow="DataInc" msprop:Generator_ColumnPropNameInTable="DataIncColumn" msprop:Generator_UserColumnName="DataInc" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="DRF" msprop:Generator_ColumnVarNameInTable="columnDRF" msprop:Generator_ColumnPropNameInRow="DRF" msprop:Generator_ColumnPropNameInTable="DRFColumn" msprop:Generator_UserColumnName="DRF" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Cantitate" msprop:Generator_ColumnVarNameInTable="columnCantitate" msprop:Generator_ColumnPropNameInRow="Cantitate" msprop:Generator_ColumnPropNameInTable="CantitateColumn" msprop:Generator_UserColumnName="Cantitate" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Moneda" msprop:Generator_ColumnVarNameInTable="columnMoneda" msprop:Generator_ColumnPropNameInRow="Moneda" msprop:Generator_ColumnPropNameInTable="MonedaColumn" msprop:Generator_UserColumnName="Moneda" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DFurnizor" msprop:Generator_ColumnVarNameInTable="columnDFurnizor" msprop:Generator_ColumnPropNameInRow="DFurnizor" msprop:Generator_ColumnPropNameInTable="DFurnizorColumn" msprop:Generator_UserColumnName="DFurnizor" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ResursaFinanciara" msprop:Generator_TableClassName="ResursaFinanciaraDataTable" msprop:Generator_TableVarName="tableResursaFinanciara" msprop:Generator_TablePropName="ResursaFinanciara" msprop:Generator_RowDeletingName="ResursaFinanciaraRowDeleting" msprop:Generator_RowChangingName="ResursaFinanciaraRowChanging" msprop:Generator_RowEvHandlerName="ResursaFinanciaraRowChangeEventHandler" msprop:Generator_RowDeletedName="ResursaFinanciaraRowDeleted" msprop:Generator_UserTableName="ResursaFinanciara" msprop:Generator_RowChangedName="ResursaFinanciaraRowChanged" msprop:Generator_RowEvArgName="ResursaFinanciaraRowChangeEvent" msprop:Generator_RowClassName="ResursaFinanciaraRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="DRF" msprop:Generator_ColumnVarNameInTable="columnDRF" msprop:Generator_ColumnPropNameInRow="DRF" msprop:Generator_ColumnPropNameInTable="DRFColumn" msprop:Generator_UserColumnName="DRF" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Moneda" msprop:Generator_ColumnVarNameInTable="columnMoneda" msprop:Generator_ColumnPropNameInRow="Moneda" msprop:Generator_ColumnPropNameInTable="MonedaColumn" msprop:Generator_UserColumnName="Moneda" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Cantitate" msprop:Generator_ColumnVarNameInTable="columnCantitate" msprop:Generator_ColumnPropNameInRow="Cantitate" msprop:Generator_ColumnPropNameInTable="CantitateColumn" msprop:Generator_UserColumnName="Cantitate" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Materiale" msprop:Generator_TableClassName="MaterialeDataTable" msprop:Generator_TableVarName="tableMateriale" msprop:Generator_TablePropName="Materiale" msprop:Generator_RowDeletingName="MaterialeRowDeleting" msprop:Generator_RowChangingName="MaterialeRowChanging" msprop:Generator_RowEvHandlerName="MaterialeRowChangeEventHandler" msprop:Generator_RowDeletedName="MaterialeRowDeleted" msprop:Generator_UserTableName="Materiale" msprop:Generator_RowChangedName="MaterialeRowChanged" msprop:Generator_RowEvArgName="MaterialeRowChangeEvent" msprop:Generator_RowClassName="MaterialeRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Valoare_x0020_totala" msdata:Caption="Expr1" msprop:Generator_ColumnVarNameInTable="columnValoare_totala" msprop:Generator_ColumnPropNameInRow="Valoare_totala" msprop:Generator_ColumnPropNameInTable="Valoare_totalaColumn" msprop:Generator_UserColumnName="Valoare totala" type="xs:decimal" minOccurs="0" />
+              <xs:element name="DMaterial" msprop:Generator_ColumnVarNameInTable="columnDMaterial" msprop:Generator_ColumnPropNameInRow="DMaterial" msprop:Generator_ColumnPropNameInTable="DMaterialColumn" msprop:Generator_UserColumnName="DMaterial" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="CantitateMateriale" msprop:Generator_TableClassName="CantitateMaterialeDataTable" msprop:Generator_TableVarName="tableCantitateMateriale" msprop:Generator_TablePropName="CantitateMateriale" msprop:Generator_RowDeletingName="CantitateMaterialeRowDeleting" msprop:Generator_RowChangingName="CantitateMaterialeRowChanging" msprop:Generator_RowEvHandlerName="CantitateMaterialeRowChangeEventHandler" msprop:Generator_RowDeletedName="CantitateMaterialeRowDeleted" msprop:Generator_UserTableName="CantitateMateriale" msprop:Generator_RowChangedName="CantitateMaterialeRowChanged" msprop:Generator_RowEvArgName="CantitateMaterialeRowChangeEvent" msprop:Generator_RowClassName="CantitateMaterialeRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Cantitate" msdata:Caption="Expr1" msprop:Generator_ColumnVarNameInTable="columnCantitate" msprop:Generator_ColumnPropNameInRow="Cantitate" msprop:Generator_ColumnPropNameInTable="CantitateColumn" msprop:Generator_UserColumnName="Cantitate" type="xs:decimal" minOccurs="0" />
+              <xs:element name="DMaterial" msprop:Generator_ColumnVarNameInTable="columnDMaterial" msprop:Generator_ColumnPropNameInRow="DMaterial" msprop:Generator_ColumnPropNameInTable="DMaterialColumn" msprop:Generator_UserColumnName="DMaterial" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="NoteElev" msprop:Generator_TableClassName="NoteElevDataTable" msprop:Generator_TableVarName="tableNoteElev" msprop:Generator_RowChangedName="NoteElevRowChanged" msprop:Generator_TablePropName="NoteElev" msprop:Generator_RowDeletingName="NoteElevRowDeleting" msprop:Generator_RowChangingName="NoteElevRowChanging" msprop:Generator_RowEvHandlerName="NoteElevRowChangeEventHandler" msprop:Generator_RowDeletedName="NoteElevRowDeleted" msprop:Generator_RowClassName="NoteElevRow" msprop:Generator_UserTableName="NoteElev" msprop:Generator_RowEvArgName="NoteElevRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Materie" msprop:Generator_ColumnVarNameInTable="columnMaterie" msprop:Generator_ColumnPropNameInRow="Materie" msprop:Generator_ColumnPropNameInTable="MaterieColumn" msprop:Generator_UserColumnName="Materie" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Medie" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnMedie" msprop:Generator_ColumnPropNameInRow="Medie" msprop:Generator_ColumnPropNameInTable="MedieColumn" msprop:Generator_UserColumnName="Medie" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Lucrari" msprop:Generator_TableClassName="LucrariDataTable" msprop:Generator_TableVarName="tableLucrari" msprop:Generator_TablePropName="Lucrari" msprop:Generator_RowDeletingName="LucrariRowDeleting" msprop:Generator_RowChangingName="LucrariRowChanging" msprop:Generator_RowEvHandlerName="LucrariRowChangeEventHandler" msprop:Generator_RowDeletedName="LucrariRowDeleted" msprop:Generator_UserTableName="Lucrari" msprop:Generator_RowChangedName="LucrariRowChanged" msprop:Generator_RowEvArgName="LucrariRowChangeEvent" msprop:Generator_RowClassName="LucrariRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="DLucrare" msprop:Generator_ColumnVarNameInTable="columnDLucrare" msprop:Generator_ColumnPropNameInRow="DLucrare" msprop:Generator_ColumnPropNameInTable="DLucrareColumn" msprop:Generator_UserColumnName="DLucrare" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CostConsum" msprop:Generator_ColumnVarNameInTable="columnCostConsum" msprop:Generator_ColumnPropNameInRow="CostConsum" msprop:Generator_ColumnPropNameInTable="CostConsumColumn" msprop:Generator_UserColumnName="CostConsum" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
