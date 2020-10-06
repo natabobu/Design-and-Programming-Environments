@@ -1,0 +1,11 @@
+E:\Univ\Info3\MPP\Lab5_2\Lab5_2\bin\Debug\Lab5_2.exe.config
+E:\Univ\Info3\MPP\Lab5_2\Lab5_2\bin\Debug\Lab5_2.exe
+E:\Univ\Info3\MPP\Lab5_2\Lab5_2\bin\Debug\Lab5_2.pdb
+E:\Univ\Info3\MPP\Lab5_2\Lab5_2\obj\Debug\Lab5_2.csprojAssemblyReference.cache
+E:\Univ\Info3\MPP\Lab5_2\Lab5_2\obj\Debug\Lab5_2.Form1.resources
+E:\Univ\Info3\MPP\Lab5_2\Lab5_2\obj\Debug\Lab5_2.Properties.Resources.resources
+E:\Univ\Info3\MPP\Lab5_2\Lab5_2\obj\Debug\Lab5_2.csproj.GenerateResource.cache
+E:\Univ\Info3\MPP\Lab5_2\Lab5_2\obj\Debug\Lab5_2.csproj.CoreCompileInputs.cache
+E:\Univ\Info3\MPP\Lab5_2\Lab5_2\obj\Debug\Lab5_2.exe
+E:\Univ\Info3\MPP\Lab5_2\Lab5_2\obj\Debug\Lab5_2.pdb
+E:\Univ\Info3\MPP\Lab5_2\Lab5_2\obj\Debug\Lab5_2.Form2.resources
