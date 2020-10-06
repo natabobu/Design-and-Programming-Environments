@@ -1,0 +1,30 @@
+E:\Univ\Info3\MPP\Proiect\ProiectMPP\ProiectMPP\bin\Debug\ProiectMPP.exe.config
+E:\Univ\Info3\MPP\Proiect\ProiectMPP\ProiectMPP\bin\Debug\ProiectMPP.exe
+E:\Univ\Info3\MPP\Proiect\ProiectMPP\ProiectMPP\bin\Debug\ProiectMPP.pdb
+E:\Univ\Info3\MPP\Proiect\ProiectMPP\ProiectMPP\obj\Debug\ProiectMPP.csprojAssemblyReference.cache
+E:\Univ\Info3\MPP\Proiect\ProiectMPP\ProiectMPP\obj\Debug\ProiectMPP.Form1.resources
+E:\Univ\Info3\MPP\Proiect\ProiectMPP\ProiectMPP\obj\Debug\ProiectMPP.Properties.Resources.resources
+E:\Univ\Info3\MPP\Proiect\ProiectMPP\ProiectMPP\obj\Debug\ProiectMPP.csproj.GenerateResource.cache
+E:\Univ\Info3\MPP\Proiect\ProiectMPP\ProiectMPP\obj\Debug\ProiectMPP.csproj.CoreCompileInputs.cache
+E:\Univ\Info3\MPP\Proiect\ProiectMPP\ProiectMPP\obj\Debug\ProiectMPP.exe
+E:\Univ\Info3\MPP\Proiect\ProiectMPP\ProiectMPP\obj\Debug\ProiectMPP.pdb
+E:\Univ\Info3\MPP\Proiect\ProiectMPP\ProiectMPP\obj\Debug\ProiectMPP.AgentMotiveExmatriculare.resources
+E:\Univ\Info3\MPP\Proiect\ProiectMPP\ProiectMPP\obj\Debug\ProiectMPP.AgentTipuriInscrieri.resources
+E:\Univ\Info3\MPP\Proiect\ProiectMPP\ProiectMPP\obj\Debug\ProiectMPP.EvenimentInscriere.resources
+E:\OneDrive - Universitatea „OVIDIUS”\Univ\Info3\MPP\Proiect\ProiectMPP\ProiectMPP\bin\Debug\ProiectMPP.exe.config
+E:\OneDrive - Universitatea „OVIDIUS”\Univ\Info3\MPP\Proiect\ProiectMPP\ProiectMPP\bin\Debug\ProiectMPP.exe
+E:\OneDrive - Universitatea „OVIDIUS”\Univ\Info3\MPP\Proiect\ProiectMPP\ProiectMPP\bin\Debug\ProiectMPP.pdb
+E:\OneDrive - Universitatea „OVIDIUS”\Univ\Info3\MPP\Proiect\ProiectMPP\ProiectMPP\obj\Debug\ProiectMPP.csprojAssemblyReference.cache
+E:\OneDrive - Universitatea „OVIDIUS”\Univ\Info3\MPP\Proiect\ProiectMPP\ProiectMPP\obj\Debug\ProiectMPP.AgentMotiveExmatriculare.resources
+E:\OneDrive - Universitatea „OVIDIUS”\Univ\Info3\MPP\Proiect\ProiectMPP\ProiectMPP\obj\Debug\ProiectMPP.AgentTipuriInscrieri.resources
+E:\OneDrive - Universitatea „OVIDIUS”\Univ\Info3\MPP\Proiect\ProiectMPP\ProiectMPP\obj\Debug\ProiectMPP.Form1.resources
+E:\OneDrive - Universitatea „OVIDIUS”\Univ\Info3\MPP\Proiect\ProiectMPP\ProiectMPP\obj\Debug\ProiectMPP.EvenimentInscriere.resources
+E:\OneDrive - Universitatea „OVIDIUS”\Univ\Info3\MPP\Proiect\ProiectMPP\ProiectMPP\obj\Debug\ProiectMPP.Properties.Resources.resources
+E:\OneDrive - Universitatea „OVIDIUS”\Univ\Info3\MPP\Proiect\ProiectMPP\ProiectMPP\obj\Debug\ProiectMPP.csproj.GenerateResource.cache
+E:\OneDrive - Universitatea „OVIDIUS”\Univ\Info3\MPP\Proiect\ProiectMPP\ProiectMPP\obj\Debug\ProiectMPP.csproj.CoreCompileInputs.cache
+E:\OneDrive - Universitatea „OVIDIUS”\Univ\Info3\MPP\Proiect\ProiectMPP\ProiectMPP\obj\Debug\ProiectMPP.exe
+E:\OneDrive - Universitatea „OVIDIUS”\Univ\Info3\MPP\Proiect\ProiectMPP\ProiectMPP\obj\Debug\ProiectMPP.pdb
+E:\OneDrive - Universitatea „OVIDIUS”\Univ\Info3\MPP\Proiect\ProiectMPP\ProiectMPP\obj\Debug\ProiectMPP.EvenimentExmatriculare.resources
+E:\OneDrive - Universitatea „OVIDIUS”\Univ\Info3\MPP\Proiect\ProiectMPP\ProiectMPP\obj\Debug\ProiectMPP.ResursaElevi.resources
+E:\OneDrive - Universitatea „OVIDIUS”\Univ\Info3\MPP\Proiect\ProiectMPP\ProiectMPP\obj\Debug\ProiectMPP.ResursaClase.resources
+E:\OneDrive - Universitatea „OVIDIUS”\Univ\Info3\MPP\Proiect\ProiectMPP\ProiectMPP\obj\Debug\ProiectMPP.RegistruElevi.resources
