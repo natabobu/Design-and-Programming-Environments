@@ -1,0 +1,10 @@
+C:\Users\alexs\Desktop\MPP\L05\L05\bin\Debug\L05.exe.config
+C:\Users\alexs\Desktop\MPP\L05\L05\bin\Debug\L05.exe
+C:\Users\alexs\Desktop\MPP\L05\L05\bin\Debug\L05.pdb
+C:\Users\alexs\Desktop\MPP\L05\L05\obj\Debug\L05.csprojAssemblyReference.cache
+C:\Users\alexs\Desktop\MPP\L05\L05\obj\Debug\L05.PopaAlexandruT1.resources
+C:\Users\alexs\Desktop\MPP\L05\L05\obj\Debug\L05.Properties.Resources.resources
+C:\Users\alexs\Desktop\MPP\L05\L05\obj\Debug\L05.csproj.GenerateResource.cache
+C:\Users\alexs\Desktop\MPP\L05\L05\obj\Debug\L05.exe
+C:\Users\alexs\Desktop\MPP\L05\L05\obj\Debug\L05.pdb
+C:\Users\alexs\Desktop\MPP\L05\L05\obj\Debug\L05.PopaAlexandruT2.resources

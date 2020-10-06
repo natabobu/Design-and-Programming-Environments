@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet1" targetNamespace="http://tempuri.org/DataSet1.xsd" xmlns:mstns="http://tempuri.org/DataSet1.xsd" xmlns="http://tempuri.org/DataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="RF1_2002ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="RF1_2002ConnectionString (Settings)" PropertyReference="ApplicationSettings.L05.Properties.Settings.GlobalReference.Default.RF1_2002ConnectionString" Provider="System.Data.OleDb" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="FurnizoriTableAdapter" GeneratorDataComponentClassName="FurnizoriTableAdapter" Name="Furnizori" UserDataComponentName="FurnizoriTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="RF1_2002ConnectionString (Settings)" DbObjectName="Furnizori" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        Furnizori.DFurnizor, SUM(Incasari.Cantitate) AS Total
+FROM            (Incasari LEFT OUTER JOIN
+                         Furnizori ON Incasari.IdFurnizor = Furnizori.IdFurnizor)
+GROUP BY Furnizori.DFurnizor
+ORDER BY SUM(Incasari.Cantitate) DESC</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="DFurnizor" DataSetColumn="DFurnizor" />
+              <Mapping SourceColumn="Total" DataSetColumn="Total" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSet1" msprop:Generator_UserDSName="DataSet1">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Furnizori" msprop:Generator_TableClassName="FurnizoriDataTable" msprop:Generator_TableVarName="tableFurnizori" msprop:Generator_TablePropName="Furnizori" msprop:Generator_RowDeletingName="FurnizoriRowDeleting" msprop:Generator_RowChangingName="FurnizoriRowChanging" msprop:Generator_RowEvHandlerName="FurnizoriRowChangeEventHandler" msprop:Generator_RowDeletedName="FurnizoriRowDeleted" msprop:Generator_UserTableName="Furnizori" msprop:Generator_RowChangedName="FurnizoriRowChanged" msprop:Generator_RowEvArgName="FurnizoriRowChangeEvent" msprop:Generator_RowClassName="FurnizoriRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="DFurnizor" msprop:Generator_ColumnVarNameInTable="columnDFurnizor" msprop:Generator_ColumnPropNameInRow="DFurnizor" msprop:Generator_ColumnPropNameInTable="DFurnizorColumn" msprop:Generator_UserColumnName="DFurnizor" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Total" msprop:Generator_ColumnVarNameInTable="columnTotal" msprop:Generator_ColumnPropNameInRow="Total" msprop:Generator_ColumnPropNameInTable="TotalColumn" msprop:Generator_UserColumnName="Total" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Procent" msdata:ReadOnly="true" msdata:Expression="Total / sum(Total) * 100" msprop:Generator_ColumnVarNameInTable="columnProcent" msprop:Generator_ColumnPropNameInRow="Procent" msprop:Generator_ColumnPropNameInTable="ProcentColumn" msprop:Generator_UserColumnName="Procent" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
