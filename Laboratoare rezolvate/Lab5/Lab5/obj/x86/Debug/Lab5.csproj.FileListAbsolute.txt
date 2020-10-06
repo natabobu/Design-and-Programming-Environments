@@ -1,0 +1,11 @@
+E:\Univ\Info3\MPP\Lab5\Lab5\bin\Debug\Lab5.exe.config
+E:\Univ\Info3\MPP\Lab5\Lab5\bin\Debug\Lab5.exe
+E:\Univ\Info3\MPP\Lab5\Lab5\bin\Debug\Lab5.pdb
+E:\Univ\Info3\MPP\Lab5\Lab5\obj\x86\Debug\Lab5.Properties.Resources.resources
+E:\Univ\Info3\MPP\Lab5\Lab5\obj\x86\Debug\Lab5.csproj.GenerateResource.Cache
+E:\Univ\Info3\MPP\Lab5\Lab5\obj\x86\Debug\Lab5.exe
+E:\Univ\Info3\MPP\Lab5\Lab5\obj\x86\Debug\Lab5.pdb
+E:\Univ\Info3\MPP\Lab5\Lab5\obj\x86\Debug\Lab5.Form1.resources
+E:\Univ\Info3\MPP\Lab5\Lab5\obj\x86\Debug\Lab5.Form2.resources
+E:\Univ\Info3\MPP\Lab5\Lab5\obj\x86\Debug\Lab5.Form3.resources
+E:\Univ\Info3\MPP\Lab5\Lab5\obj\x86\Debug\Lab5.csprojResolveAssemblyReference.cache
